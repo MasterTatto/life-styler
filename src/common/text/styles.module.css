@@ -1,0 +1,45 @@
+.text {
+    font-family: Manrope, sans-serif;
+    color: rgba(22, 26, 38, 1)
+}
+
+.text_h1 {
+    font-weight: 300;
+    line-height: 65.57px;
+    font-size: 48px;
+}
+
+.text_h2 {
+    font-weight: 300;
+    line-height: 43.71px;
+    font-size: 32px;
+}
+
+.text_h3 {
+    font-weight: 300;
+    line-height: 27.32px;
+    font-size: 20px;
+}
+
+.text_p {
+    font-family: Manrope, sans-serif;
+    color: rgba(22, 26, 38, 1);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27.32px;
+}
+
+.text_p2 {
+    font-size: 18px;
+    line-height: 24.59px;
+}
+
+.text_p3 {
+    font-size: 16px;
+    line-height: 21.86px;
+}
+
+.text_p4 {
+    font-size: 12px;
+    line-height: 16.39px;
+}
