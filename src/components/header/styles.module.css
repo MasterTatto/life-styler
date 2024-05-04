@@ -1,14 +1,16 @@
 .contain {
     background: inherit;
-    /*background: #1936AA;*/
     position: fixed;
     z-index: 10;
-    width: 100%;
-    top: 16px;
-    padding: 0 20px;
-    /*min-height: 116px;*/
-    /*max-height: 116px;*/
-    /*overflow: hidden;*/
+    width: calc(100vw - 20px);
+    top: 0;
+    padding: 16px 20px 16px 20px;
+    margin: 0 auto;
+    transition: .4s all;
+}
+
+.contain_v2 {
+    background: #1936AA;
 }
 
 .line {

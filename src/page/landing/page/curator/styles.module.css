@@ -1,0 +1,67 @@
+.main {
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colored {
+    color: #FF6664;
+}
+
+.title {
+    color: rgba(0, 0, 0, 1) !important;
+    /*text-align: center !important;*/
+
+}
+
+.under_line {
+    padding-bottom: 16px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.under_line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 30px;
+    background: rgba(255, 102, 100, 1);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.description_text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.description_text p {
+    color: rgba(22, 26, 38, 1) !important;
+}
+
+.description_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.description_contact_item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

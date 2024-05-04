@@ -11,3 +11,33 @@
     position: relative;
     padding: 0 20px;
 }
+
+.main_2 {
+    background-image: url("/src/assetss/landing/bg_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_3 {
+    background-image: url("/src/assetss/landing/bg_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_4 {
+    background-image: url("/src/assetss/landing/bg_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_5 {
+    background-image: url("/src/assetss/landing/bg_5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_6 {
+    background-image: url("/src/assetss/landing/bg_6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
