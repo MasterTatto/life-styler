@@ -153,8 +153,8 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        /*border: 1px solid red;*/
         width: fit-content;
+        padding-right: 20px;
     }
 
     .left_content_wrapper {
@@ -162,6 +162,7 @@
         align-items: flex-start;
         gap: 12px;
     }
+
 
     .link {
         margin-left: 0;
@@ -175,6 +176,9 @@
         width: 100%;
     }
 
+    /*.left_content {*/
+    /*    width: fit-content;*/
+    /*}*/
     .main {
         padding-bottom: 45px;
     }
