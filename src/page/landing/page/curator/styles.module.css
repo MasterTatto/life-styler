@@ -60,8 +60,24 @@
     gap: 24px;
 }
 
-.description_contact_item{
+.description_contact_item {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 45px 16px;
+        padding-bottom: 0;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .img img {
+        width: calc(100%);
+        margin-bottom: -3px;
+    }
 }

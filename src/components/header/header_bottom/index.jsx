@@ -17,32 +17,32 @@ const HeaderBottom = () => {
         setSelectedLink(index);
     };
 
-    const getNavLinkWidth = (index) => {
-        const navLink = document.querySelector(`.link${index}`);
-        return navLink?.offsetWidth;
-    };
-
-    const getOffset = (index) => {
-        let offset = 0;
-        for (let i = 1; i < index; i++) {
-            offset += getNavLinkWidth(i);
-        }
-        return offset;
-    };
-
-
-    const moveLine = () => {
-        console.log(selectedLink)
-        const offset = getOffset(selectedLink || 1);
-
-        lineRef.current.style.transform = `translateX(${offset + 40}px)`;
-        setLineWidth(getNavLinkWidth(selectedLink || 1) - 40);
-    };
-
-
-    useEffect(() => {
-        moveLine()
-    }, [selectedLink]);
+    // const getNavLinkWidth = (index) => {
+    //     const navLink = document.querySelector(`.link${index}`);
+    //     return navLink?.offsetWidth;
+    // };
+    //
+    // const getOffset = (index) => {
+    //     let offset = 0;
+    //     for (let i = 1; i < index; i++) {
+    //         offset += getNavLinkWidth(i);
+    //     }
+    //     return offset;
+    // };
+    //
+    //
+    // const moveLine = () => {
+    //     console.log(selectedLink)
+    //     const offset = getOffset(selectedLink || 1);
+    //
+    //     lineRef.current.style.transform = `translateX(${offset + 40}px)`;
+    //     setLineWidth(getNavLinkWidth(selectedLink || 1) - 40);
+    // };
+    //
+    //
+    // useEffect(() => {
+    //     moveLine()
+    // }, [selectedLink]);
 
     return (
         <div className={s.content}>
@@ -104,9 +104,9 @@ const HeaderBottom = () => {
             </div>
 
             <div className={s.content_ritgh}>
-                <div ref={lineRef} className={s.line}
-                     style={{width: lineWidth}}
-                />
+                {/*<div ref={lineRef} className={s.line}*/}
+                {/*     style={{width: lineWidth}}*/}
+                {/*/>*/}
                 <Text type={'p16'} onClick={() => handleNavLinkClick(1)}
                       className={classNames('link1', s.link, selectedLink === 1 && s.active)}
                 >О нас</Text>

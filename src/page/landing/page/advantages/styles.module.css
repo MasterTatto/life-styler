@@ -59,4 +59,18 @@
     min-height: 120px;
 }
 
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 45px 16px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 34px;
+        width: 100%;
+        margin-top: 64px;
+    }
+}
+
 

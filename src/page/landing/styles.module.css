@@ -41,3 +41,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.main_7 {
+    background-image: url("/src/assetss/landing/bg_7.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+.main{
+    min-height: fit-content;
+}
+}

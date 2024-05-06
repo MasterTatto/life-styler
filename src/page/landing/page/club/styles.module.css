@@ -59,3 +59,19 @@
     width: 30px;
     background: rgba(255, 102, 100, 1);
 }
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 45px 16px;
+    }
+
+    .title {
+        text-align: center !important;
+    }
+
+    .video {
+        max-width: 100%;
+        height: 250px;
+        width: 100%;
+    }
+}

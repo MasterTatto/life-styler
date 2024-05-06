@@ -130,3 +130,54 @@
     position: absolute;
     left: 65px;
 }
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 45px 16px;
+    }
+
+    .price_content {
+        margin-top: 25px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .book {
+        position: static;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: fit-content;
+        left: 0;
+    }
+
+    .book img {
+        position: static;
+        width: 100%;
+    }
+
+    .price_content_info_title {
+        text-align: center !important;
+    }
+
+    .price_content {
+        margin-bottom: 50px;
+    }
+
+    .teach_box {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .teach_text {
+        right: 20px;
+        left: 20px;
+        max-width: 100% !important;
+    }
+}

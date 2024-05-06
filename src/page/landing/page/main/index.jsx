@@ -8,7 +8,7 @@ import Button from "../../../../common/button";
 
 const Main = () => {
     return (
-        <>
+        <div className={s.main}>
             <Container>
                 <div className={s.content}>
                     <div className={classNames(s.item, s.item_bg)}/>
@@ -42,7 +42,7 @@ const Main = () => {
             <div className={s.img}>
                 <img src={gays} className={s.bg} alt=""/>
             </div>
-        </>
+        </div>
     );
 };
 

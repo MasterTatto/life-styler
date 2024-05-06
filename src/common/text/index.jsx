@@ -19,7 +19,9 @@ const Text = ({children, type = 'p20', className, onClick, style}) => {
                     classNames(
                         s.text_p, type === 'p18' && s.text_p2,
                         type === 'p16' && s.text_p3,
-                        type === 'p12' && s.text_p4, className)}
+                        type === 'p14' && s.text_p5,
+                        type === 'p12' && s.text_p4,
+                        className)}
                 >
                     {children}
                 </p>

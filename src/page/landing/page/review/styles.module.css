@@ -193,3 +193,19 @@
     line-clamp: 6;
     -webkit-box-orient: vertical;
 }
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding-top: 45px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .navigate {
+        margin: 30px 0;
+    }
+}

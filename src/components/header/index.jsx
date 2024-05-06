@@ -4,9 +4,12 @@ import Container from "../container";
 import HeaderTop from "./header_top";
 import HeaderBottom from "./header_bottom";
 import classNames from "classnames";
+import {useMediaQuery} from "@mui/material";
 
 
 const Header = () => {
+    const matches = useMediaQuery('(max-width:768px)');
+
     const [isTop, setIsTop] = useState(true)
 
     useEffect(() => {
@@ -27,11 +30,11 @@ const Header = () => {
     }, [])
     return (
         <div className={classNames(s.contain, !isTop && s.contain_v2)}>
-            <Container>
+            {!matches && <Container>
                 <HeaderTop/>
                 <div className={s.line}/>
                 <HeaderBottom/>
-            </Container>
+            </Container>}
         </div>
     );
 };

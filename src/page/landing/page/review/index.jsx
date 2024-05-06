@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import s from './styles.module.css'
-import Container from "../../../components/container";
-import Text from "../../../common/text";
-import {ReactComponent as ArrowIcon} from "../../svg/arrowSwipper.svg";
+import Container from "../../../../components/container";
+import Text from "../../../../common/text";
+import {ReactComponent as ArrowIcon} from "../../../../assetss/svg/arrowSwipper.svg";
 import classNames from "classnames";
 import 'swiper/css';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Avatar} from "@mui/material";
+import {Avatar, useMediaQuery} from "@mui/material";
 
 const reviews = [
     {
@@ -61,6 +61,8 @@ const reviews = [
 ];
 
 const Review = () => {
+    const matches = useMediaQuery('(max-width:768px)');
+
     const [directionType, setDirectionType] = useState();
     const [activeIndex, setActiveIndex] = useState(0);
     const [swiper, setSwiper] = useState();
@@ -79,7 +81,7 @@ const Review = () => {
                 <div className={s.header}>
                     <div className={s.under_line}>
                         <Text type={'h48'} className={s.title}>
-                            Стоимость обучения
+                            Отзывы наших партнеров
                         </Text>
                     </div>
 
@@ -100,9 +102,9 @@ const Review = () => {
                             ))}
                         </div>
                         <div
-                            className={classNames(s.arrow, s.arrow_right, reviews?.length - 1 === activeIndex + 2 && s.disabled)}
+                            className={classNames(s.arrow, s.arrow_right, reviews?.length - 1 === activeIndex + (matches ? 0 : 2) && s.disabled)}
                             onClick={() => {
-                                if (reviews?.length - 1 === activeIndex + 2) return
+                                if (reviews?.length - 1 === activeIndex + (matches ? 0 : 2)) return
                                 handleArrowClick('right')
                                 swiper?.slideNext()
                             }}>
@@ -116,8 +118,8 @@ const Review = () => {
                         style={{
                             paddingBottom: '1px'
                         }}
-                        spaceBetween={50}
-                        slidesPerView={3}
+                        spaceBetween={matches ? 30 : 50}
+                        slidesPerView={matches ? 1.2 : 3}
 
                         onSlideChange={(e) => setActiveIndex(e.activeIndex)}
                         onSwiper={(swiper) => setSwiper(swiper)}

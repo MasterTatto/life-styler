@@ -4,8 +4,9 @@ import Main from "./page/main";
 import Club from "./page/club";
 import Advantages from "./page/advantages";
 import Price from "./page/price";
-import Review from "../../assetss/svg/review";
+import Review from "./page/review";
 import Curator from "./page/curator";
+import News from "./page/news";
 
 const Landing = () => {
     return (
@@ -27,6 +28,9 @@ const Landing = () => {
             </div>
             <div className={s.main_6}>
                 <Curator/>
+            </div>
+            <div className={s.main_7}>
+                <News/>
             </div>
         </>
     );

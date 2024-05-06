@@ -54,5 +54,23 @@
     font-weight: 800 !important;
     line-height: 16.39px !important;
     text-transform: uppercase !important;
+}
 
+@media screen and (max-width: 768px) {
+    .header_top_left_item p {
+        display: none;
+    }
+
+    .header_top_left_item {
+        max-width: fit-content;
+    }
+
+    .header_top {
+        gap: 17px;
+    }
+
+    .header_top_left {
+        justify-content: flex-start;
+        gap: 17px;
+    }
 }
