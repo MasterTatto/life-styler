@@ -13,14 +13,27 @@
     background: #1936AA;
 }
 
+
 .line {
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
     margin: 16px 0 13px 0;
 }
 
+.dark_line{
+    background: rgba(29, 36, 52, 0.2);
+}
+
+.isAuth_header {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    position: sticky;
+    width: calc(100%);
+}
+
 @media screen and (max-width: 768px) {
     .contain {
         width: 100%;
+
     }
 }

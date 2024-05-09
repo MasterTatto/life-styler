@@ -73,8 +73,20 @@
     color: rgba(255, 255, 255, .7) !important;
 }
 
+.dark_link {
+    color: #1D2434 !important;
+}
+
+.dark_link:hover {
+    color: rgba(29, 36, 52, 0.7) !important;
+}
+
 .lang {
     color: rgba(255, 255, 255, 1) !important;;
+}
+
+.dark_lang{
+    color: #1D2434 !important;
 }
 
 .arrow_box {

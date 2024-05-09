@@ -35,6 +35,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     line-height: 1;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ol, ul {

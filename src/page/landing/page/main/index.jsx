@@ -5,6 +5,7 @@ import gays from '../../../../assetss/guys.png'
 import classNames from "classnames";
 import Text from "../../../../common/text";
 import Button from "../../../../common/button";
+import {Avatar} from "@mui/material";
 
 const Main = () => {
     return (
@@ -40,7 +41,7 @@ const Main = () => {
                 </div>
             </Container>
             <div className={s.img}>
-                <img src={gays} className={s.bg} alt=""/>
+                <Avatar sx={{height: 'fit-content', borderRadius: '0'}} src={gays} className={s.bg} alt=""/>
             </div>
         </div>
     );

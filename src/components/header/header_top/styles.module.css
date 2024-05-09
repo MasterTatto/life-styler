@@ -34,6 +34,18 @@
     transition: .4s all;
 }
 
+.dark_header_top_left_item p {
+    color: #1D2434;
+}
+
+.dark_header_top_left_item svg path {
+    fill: #fff;
+}
+
+.dark_header_top_left_item svg path {
+    fill: rgba(29, 36, 52, 0.4);
+}
+
 .header_top_left_item:hover svg path {
     fill: #FF6664;
 }
@@ -54,6 +66,11 @@
     font-weight: 800 !important;
     line-height: 16.39px !important;
     text-transform: uppercase !important;
+}
+
+.dark_btn {
+    color: #1D2434 !important;
+    border-color: #1D2434 !important;
 }
 
 @media screen and (max-width: 768px) {

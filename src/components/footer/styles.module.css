@@ -6,6 +6,10 @@
     padding: 70px 20px 46px 20px;
 }
 
+.main_auth {
+    background-image: none;
+}
+
 .content {
     display: flex;
     width: 100%;

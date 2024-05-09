@@ -11,25 +11,25 @@ import News from "./page/news";
 const Landing = () => {
     return (
         <>
-            <div className={s.main}>
+            <div className={s.main} id={'main'}>
                 <Main/>
             </div>
             <div className={s.main_2}>
                 <Club/>
             </div>
-            <div className={s.main_3}>
+            <div className={s.main_3} id={'advantages'}>
                 <Advantages/>
             </div>
-            <div className={s.main_4}>
+            <div className={s.main_4} id={'price'}>
                 <Price/>
             </div>
-            <div className={s.main_5}>
+            <div className={s.main_5} id={'review'}>
                 <Review/>
             </div>
-            <div className={s.main_6}>
+            <div className={s.main_6} id={'curator'}>
                 <Curator/>
             </div>
-            <div className={s.main_7}>
+            <div className={s.main_7} id={'news'}>
                 <News/>
             </div>
         </>

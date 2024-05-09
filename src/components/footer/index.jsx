@@ -20,43 +20,14 @@ const header_top = [
     {title: 'SMM', icon: <Icon4/>},
     {title: 'Chat', icon: <Icon5/>},
 ]
-const Footer = () => {
+const Footer = ({isAuthAndNotLanding}) => {
     const [selectedLink, setSelectedLink] = useState(1);
-    const lineRef = useRef(null);
-    const [lineWidth, setLineWidth] = useState(0);
     const handleNavLinkClick = (index) => {
         setSelectedLink(index);
     };
 
-    // const getNavLinkWidth = (index) => {
-    //     const navLink = document.querySelector(`.link${index}`);
-    //     return navLink?.offsetWidth;
-    // };
-    //
-    // const getOffset = (index) => {
-    //     let offset = 0;
-    //     for (let i = 1; i < index; i++) {
-    //         offset += getNavLinkWidth(i);
-    //     }
-    //     return offset;
-    // };
-    //
-    //
-    // const moveLine = () => {
-    //     const offset = getOffset(selectedLink || 1);
-    //     const added = (((selectedLink - 1) * 20))
-    //
-    //     lineRef.current.style.transform = `translateX(${selectedLink === 1 ? offset : (offset + added)}px)`;
-    //     setLineWidth(getNavLinkWidth(selectedLink || 1) - (selectedLink === 1 ? 40 : 40));
-    // };
-    //
-    //
-    // useEffect(() => {
-    //     moveLine()
-    // }, [selectedLink]);
-
     return (
-        <div className={s.main}>
+        <div className={classNames(s.main,isAuthAndNotLanding && s.main_auth)}>
             <Container>
                 <div className={s.content}>
                     <div className={s.left_content_wrapper}>
