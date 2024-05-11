@@ -1,0 +1,102 @@
+.navigate {
+    min-height: calc(100dvh + 0px);
+    max-height: calc(100dvh + 0px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 340px;
+    max-width: 340px;
+    width: 340px;
+    background-image: url("/src/assetss/landing/bg_nav.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    top: 0;
+}
+
+.navigate::-webkit-scrollbar {
+    background-color: #2947C4;
+    width: 0px;
+}
+
+/* background of the scrollbar except button or resizer */
+.navigate::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* scrollbar itself */
+.navigate::-webkit-scrollbar-thumb {
+    background-color: #2947C4;
+    /*border-radius: 16px;*/
+    border: 1px solid #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 20px 0 20px;
+}
+
+.arrow_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow_box svg {
+    margin-left: 6px;
+    transition: .4s all;
+}
+
+.arrow_box_rotate svg {
+    transform: rotate(180deg);
+}
+
+.choose_lang {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.lang {
+    color: rgba(255, 255, 255, 1) !important;;
+}
+
+.choose_lang:hover {
+    background: rgba(206, 206, 206, 0.2) !important;
+}
+
+.choose_lang_active {
+    color: #fff !important;
+    background: rgba(255, 102, 100, 1) !important;
+}
+
+.choose_lang_active:hover {
+    background: rgba(255, 102, 100, 1) !important;
+}
+
+.title {
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    line-height: 1.5;
+    margin: 4px 0;
+}
+
+.sub_title {
+    line-height: 1.5;
+    margin: 4px 0;
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.content {
+    margin-top: 34px;
+}

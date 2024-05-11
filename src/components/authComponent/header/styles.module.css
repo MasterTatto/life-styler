@@ -1,0 +1,58 @@
+.header {
+    height: 65px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 0 70px;
+    z-index: 1;
+}
+
+.btn {
+    color: #1D2434 !important;
+    border-color: #1D2434 !important;
+    width: fit-content !important;
+    height: 32px !important;
+}
+
+.links, .action {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.link_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.link_item p {
+    font-family: Manrope, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(29, 36, 52, 1);
+    transition: 0.4s all;
+}
+
+.link_item svg path {
+    transition: 0.4s all;
+    fill: rgba(29, 36, 52, .3);
+}
+
+.link_item:hover svg path {
+    transition: 0.4s all;
+    fill: rgba(255, 102, 100, 1);
+}
+
+.link_item_action svg path {
+    fill: rgba(255, 102, 100, 1);
+}

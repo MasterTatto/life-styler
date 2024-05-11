@@ -17,7 +17,7 @@ const header_top = [
     {title: 'SMM', icon: <Icon4/>},
     {title: 'Chat', icon: <Icon5/>},
 ]
-const HeaderTop = ({isAuthAndNotLanding}) => {
+const HeaderTop = () => {
     const [openModal, setOpenModal] = useState(false)
     const {isAuth, setIsAuth} = useContext(AuthContext)
 
@@ -27,7 +27,7 @@ const HeaderTop = ({isAuthAndNotLanding}) => {
             <div className={s.header_top_left}>
                 {header_top?.map((el, i) => {
                     return <div
-                        className={classNames(s.header_top_left_item, isAuthAndNotLanding && s.dark_header_top_left_item)}>
+                        className={classNames(s.header_top_left_item)}>
                         {el.icon}
                         <p>{el.title}</p>
                     </div>
@@ -36,7 +36,7 @@ const HeaderTop = ({isAuthAndNotLanding}) => {
 
             <div className={s.btns}>
                 <Button className={s.btn}>{isAuth ? 'Кабинет' : 'Регистрация'}</Button>
-                <Button variant={2} className={classNames(s.btn, isAuthAndNotLanding && s.dark_btn)} onClick={() => {
+                <Button variant={2} className={classNames(s.btn)} onClick={() => {
                     if (isAuth) {
                         setIsAuth('')
                     } else {

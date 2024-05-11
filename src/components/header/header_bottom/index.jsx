@@ -7,9 +7,7 @@ import Text from "../../../common/text";
 import {Button, Popover} from "@mui/material";
 import PopupState, {bindTrigger, bindPopover} from 'material-ui-popup-state';
 import {ReactComponent as ArrowIcon} from "../../../assetss/svg/arrow_lang.svg";
-import {AuthContext} from "../../../App";
-
-import {NavLink, useLocation} from "react-router-dom";
+import {ActiveLinkContext} from "../../unAuthContainer";
 
 const authNav = [
     {title: 'Главная', link: '/'},
@@ -21,29 +19,26 @@ const authNav = [
     {title: 'Поддержка', link: '/support'},
 ]
 
-const HeaderBottom = ({isAuthAndNotLanding}) => {
-    const {isAuth} = useContext(AuthContext)
+export const scroll = (id) => {
+    const section = document.querySelector(`#${id}`);
+    const offset = (id === 'curator') ? 95 : 130
+    window.scrollTo(0, section.offsetTop - offset);
+};
 
-    const {pathname} = useLocation()
-
-    const [selectedLink, setSelectedLink] = useState(1);
+const HeaderBottom = () => {
+    const {setSelectedLink, selectedLink} = useContext(ActiveLinkContext)
     const [lang, setLang] = useState('Рус')
 
     const handleNavLinkClick = (index) => {
         setSelectedLink(index);
     };
 
-    const scroll = (id) => {
-        const section = document.querySelector(`#${id}`);
-        const offset = (id === 'curator') ? 95 : 130
-        window.scrollTo(0, section.offsetTop - offset);
-    };
 
     return (
         <div className={s.content}>
             <div className={s.content_left}>
                 <div className={s.logo}>
-                    <img src={isAuthAndNotLanding ? logoDark : logo} alt="logo"/>
+                    <img src={logo} alt="logo"/>
                 </div>
 
                 <div>
@@ -53,7 +48,7 @@ const HeaderBottom = ({isAuthAndNotLanding}) => {
                                 <div  {...bindTrigger(popupState)}>
                                     <div className={classNames(s.arrow_box, popupState.isOpen && s.arrow_box_rotate)}>
                                         <Text type={'p12'}
-                                              className={classNames(s.lang, isAuthAndNotLanding && s.dark_lang)}>
+                                              className={classNames(s.lang)}>
                                             {lang}
                                         </Text>
 
@@ -99,15 +94,7 @@ const HeaderBottom = ({isAuthAndNotLanding}) => {
             </div>
 
             <div className={s.content_ritgh}>
-                {isAuth ? <React.Fragment>
-                    {authNav?.map((el, i) => {
-                        return <NavLink to={el.link} key={i}>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(1)}
-                                  className={classNames('link1', s.link, pathname === el.link && s.active, isAuthAndNotLanding && s.dark_link)}
-                            >{el.title}</Text>
-                        </NavLink>
-                    })}
-                </React.Fragment> : <React.Fragment>
+                <React.Fragment>
                     <Text type={'p16'} onClick={() => {
                         handleNavLinkClick(1)
                         scroll('main')
@@ -145,7 +132,6 @@ const HeaderBottom = ({isAuthAndNotLanding}) => {
                           className={classNames('link6', s.link, selectedLink === 6 && s.active)}
                     >новости</Text>
                 </React.Fragment>
-                }
             </div>
         </div>
     );

@@ -11,11 +11,8 @@ import {useLocation} from "react-router-dom";
 
 const Header = () => {
     const matches = useMediaQuery('(max-width:768px)');
-    const {isAuth} = useContext(AuthContext)
     const {pathname} = useLocation()
     const [isTop, setIsTop] = useState(true)
-
-    const isAuthAndNotLanding = (isAuth && pathname !== '/')
 
     useEffect(() => {
         const handleScroll = (e) => {
@@ -34,11 +31,11 @@ const Header = () => {
     }, [])
     return (
         <div
-            className={classNames(s.contain, (!isTop && pathname === '/') && s.contain_v2, (isAuth && pathname !== '/') && s.isAuth_header)}>
+            className={classNames(s.contain, (!isTop && pathname === '/') && s.contain_v2)}>
             {!matches && <Container>
-                <HeaderTop isAuthAndNotLanding={isAuthAndNotLanding}/>
-                <div className={classNames(s.line, isAuthAndNotLanding && s.dark_line)}/>
-                <HeaderBottom isAuthAndNotLanding={isAuthAndNotLanding}/>
+                <HeaderTop/>
+                <div className={classNames(s.line)}/>
+                <HeaderBottom/>
             </Container>}
         </div>
     );

@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+}
+
+.content_header {
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    padding: 38px 70px;
+}

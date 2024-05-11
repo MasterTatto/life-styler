@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import Container from "../container";
 import s from './styles.module.css'
 import Text from "../../common/text";
@@ -12,6 +12,8 @@ import {ReactComponent as Icon5} from "../../assetss/svg/header/chat.svg";
 import {ReactComponent as Icon6} from "../../assetss/svg/header/tg.svg";
 import {ReactComponent as Icon7} from "../../assetss/svg/header/vk.svg";
 import {ReactComponent as Icon8} from "../../assetss/svg/header/youtube.svg";
+import {scroll} from "../header/header_bottom";
+import {ActiveLinkContext} from "../unAuthContainer";
 
 const header_top = [
     {title: 'Youtube', icon: <Icon8/>},
@@ -20,14 +22,14 @@ const header_top = [
     {title: 'SMM', icon: <Icon4/>},
     {title: 'Chat', icon: <Icon5/>},
 ]
-const Footer = ({isAuthAndNotLanding}) => {
-    const [selectedLink, setSelectedLink] = useState(1);
+const Footer = () => {
+    const {setSelectedLink, selectedLink} = useContext(ActiveLinkContext)
     const handleNavLinkClick = (index) => {
         setSelectedLink(index);
     };
 
     return (
-        <div className={classNames(s.main,isAuthAndNotLanding && s.main_auth)}>
+        <div className={classNames(s.main)}>
             <Container>
                 <div className={s.content}>
                     <div className={s.left_content_wrapper}>
@@ -58,26 +60,41 @@ const Footer = ({isAuthAndNotLanding}) => {
                             </div>
                         </div>
                         <div className={classNames(s.right_content_top, s.right_content_top_mobile)}>
-                            {/*<div ref={lineRef} className={s.line}*/}
-                            {/*     style={{width: lineWidth}}*/}
-                            {/*/>*/}
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(1)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(1)
+                                scroll('main')
+                            }}
                                   style={{marginLeft: '0px'}}
                                   className={classNames('link1', s.link, selectedLink === 1 && s.active)}
                             >О нас</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(2)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(2)
+                                scroll('advantages')
+                            }}
                                   className={classNames('link2', s.link, selectedLink === 2 && s.active)}
                             >преимущества</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(3)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(3)
+                                scroll('price')
+                            }}
                                   className={classNames('link3', s.link, selectedLink === 3 && s.active)}
                             >цены</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(4)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(4)
+                                scroll('review')
+                            }}
                                   className={classNames('link4', s.link, selectedLink === 4 && s.active)}
                             >отзывы</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(5)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(5)
+                                scroll('curator')
+                            }}
                                   className={classNames('link5', s.link, selectedLink === 5 && s.active)}
                             >ваш куратор</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(6)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(6)
+                                scroll('news')
+                            }}
                                   className={classNames('link6', s.link, selectedLink === 6 && s.active)}
                             >новости</Text>
                         </div>
@@ -86,26 +103,41 @@ const Footer = ({isAuthAndNotLanding}) => {
 
                     <div className={s.right_content}>
                         <div className={classNames(s.right_content_top, s.right_content_top_hidden)}>
-                            {/*<div ref={lineRef} className={s.line}*/}
-                            {/*     style={{width: lineWidth}}*/}
-                            {/*/>*/}
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(1)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(1)
+                                scroll('main')
+                            }}
                                   style={{marginLeft: '0px'}}
                                   className={classNames('link1', s.link, selectedLink === 1 && s.active)}
                             >О нас</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(2)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(2)
+                                scroll('advantages')
+                            }}
                                   className={classNames('link2', s.link, selectedLink === 2 && s.active)}
                             >преимущества</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(3)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(3)
+                                scroll('price')
+                            }}
                                   className={classNames('link3', s.link, selectedLink === 3 && s.active)}
                             >цены</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(4)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(4)
+                                scroll('review')
+                            }}
                                   className={classNames('link4', s.link, selectedLink === 4 && s.active)}
                             >отзывы</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(5)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(5)
+                                scroll('curator')
+                            }}
                                   className={classNames('link5', s.link, selectedLink === 5 && s.active)}
                             >ваш куратор</Text>
-                            <Text type={'p16'} onClick={() => handleNavLinkClick(6)}
+                            <Text type={'p16'} onClick={() => {
+                                handleNavLinkClick(6)
+                                scroll('news')
+                            }}
                                   className={classNames('link6', s.link, selectedLink === 6 && s.active)}
                             >новости</Text>
                         </div>
