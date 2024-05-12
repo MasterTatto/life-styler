@@ -5,6 +5,7 @@ import Text from "../../common/text";
 import img from '../../assetss/book.png'
 import Button from "../../common/button";
 import {NavLink, useNavigate} from "react-router-dom";
+import PaginationCustom from "../../components/pagination";
 
 const data = [
     {
@@ -56,6 +57,8 @@ const Course = () => {
                     </div>
                 })}
             </div>
+
+            <PaginationCustom/>
         </div>
     );
 };
