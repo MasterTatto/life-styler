@@ -14,9 +14,9 @@ import classNames from "classnames";
 
 const header_top = [
     {title: 'Youtube', icon: <Icon1/>},
-    {title: 'Vkontakte', icon: <Icon2/>},
+    // {title: 'Vkontakte', icon: <Icon2/>},
     {title: 'Telegram', icon: <Icon3/>},
-    {title: 'SMM', icon: <Icon4/>},
+    // {title: 'SMM', icon: <Icon4/>},
     {title: 'Chat', icon: <Icon5/>},
 ]
 
@@ -34,15 +34,15 @@ const Header = () => {
             </div>
 
             <div className={s.action}>
-                <div className={classNames(s.link_item,s.link_item_action)}>
+                <div className={classNames(s.link_item, s.link_item_action)}>
                     <Chat/>
                     <p>Сообщения</p>
                 </div>
-                <div className={classNames(s.link_item,s.link_item_action)}>
+                <div className={classNames(s.link_item, s.link_item_action)}>
                     <Setting/>
                     <p>Настройки</p>
                 </div>
-                <div className={classNames(s.link_item,s.link_item_action)}>
+                <div className={classNames(s.link_item, s.link_item_action)}>
                     <Purse/>
                     <p>Управление счетом</p>
                 </div>

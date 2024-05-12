@@ -4,6 +4,7 @@ import Container from "../../components/container";
 import Text from "../../common/text";
 import img from '../../assetss/book.png'
 import Button from "../../common/button";
+import {NavLink} from "react-router-dom";
 
 const data = [
     {
@@ -39,8 +40,12 @@ const MasterClass = () => {
                             <Text type={'p18'} className={s.item_sub_title}>{el.sub_title}</Text>
 
                             <div className={s.btns}>
-                                <Button variant={2} className={s.dark_btn}>ПЕРЕЙТИ</Button>
-                                <Button>Купить</Button>
+                                <NavLink to={`/lk/master-class/${i + 1}`}>
+                                    <Button variant={2} className={s.dark_btn}>ПЕРЕЙТИ</Button>
+                                </NavLink>
+                                <NavLink>
+                                    <Button>Купить</Button>
+                                </NavLink>
                             </div>
                         </div>
                         <div className={s.item_right}>

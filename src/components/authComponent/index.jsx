@@ -4,6 +4,7 @@ import {AuthContext} from "../../App";
 import {Navigate, Outlet} from "react-router-dom";
 import Header from "./header";
 import NavigatePanel from "./navigate";
+import Footer from "../footer";
 
 const AuthComponent = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext)

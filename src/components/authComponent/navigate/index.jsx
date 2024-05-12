@@ -68,15 +68,15 @@ const navigate = [
     {
         title: 'Отзывы', link: '/lk', icon: <Icon8/>,
     },
-    {
-        title: 'Реклама', link: '/lk', icon: <Icon9/>,
-    },
-    {
-        title: 'Фонды и лотереи', icon: <Icon10/>, data: [
-            {title: 'Фонды', link: '/lk'},
-            {title: 'Лотереи', link: '/lk'},
-        ]
-    },
+    // {
+    //     title: 'Реклама', link: '/lk', icon: <Icon9/>,
+    // },
+    // {
+    //     title: 'Фонды и лотереи', icon: <Icon10/>, data: [
+    //         {title: 'Фонды', link: '/lk'},
+    //         {title: 'Лотереи', link: '/lk'},
+    //     ]
+    // },
     {
         title: 'Настройки кабинета', icon: <Icon11/>, data: [
             {title: 'Профиль', link: '/lk'},
