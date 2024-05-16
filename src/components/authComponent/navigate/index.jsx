@@ -50,7 +50,7 @@ const navigate = [
         title: 'Обучение', icon: <Icon4/>, data: [
             {title: 'Курсы', link: 'course'},
             {title: 'Мастер классы', link: 'master-class'},
-            {title: 'Книги, фильмы, музыка', link: '/lk'},
+            {title: 'Книги, фильмы, музыка', link: 'media'},
             {title: 'Мотивация', link: '/lk'},
             {title: 'Полезные статьи', link: '/lk'},
             {title: 'Полезные программы', link: '/lk'},

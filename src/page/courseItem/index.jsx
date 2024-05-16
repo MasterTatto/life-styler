@@ -8,17 +8,16 @@ import {ReactComponent as Star} from "../../assetss/svg/courseItem/star.svg";
 import {ReactComponent as Chat} from "../../assetss/svg/courseItem/chat.svg";
 import {ReactComponent as Document} from "../../assetss/svg/courseItem/document.svg";
 import Button from "../../common/button";
+import TitleLk from "../../common/title_lk";
 
 const CourseItem = () => {
     const {id} = useParams()
 
     return (
         <div className={s.main}>
-            <div className={s.under_line}>
-                <Text type={'h48'} className={s.title}>
-                    Система обучения «Запуск Новичка №{id}»
-                </Text>
-            </div>
+            <TitleLk>
+                Система обучения «Запуск Новичка №{id}»
+            </TitleLk>
 
             <div className={s.content}>
                 <Avatar src={img} sx={{borderRadius: '0', width: '45%', height: 'auto'}}/>

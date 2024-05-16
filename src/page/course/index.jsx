@@ -6,6 +6,7 @@ import img from '../../assetss/book.png'
 import Button from "../../common/button";
 import {NavLink, useNavigate} from "react-router-dom";
 import PaginationCustom from "../../components/pagination";
+import TitleLk from "../../common/title_lk";
 
 const data = [
     {
@@ -29,11 +30,9 @@ const Course = () => {
     return (
         <div className={s.main}>
 
-            <div className={s.under_line}>
-                <Text type={'h48'} className={s.title}>
-                    Курсы
-                </Text>
-            </div>
+            <TitleLk>
+                Курсы
+            </TitleLk>
 
             <div className={s.content}>
                 {data?.map((el, i) => {

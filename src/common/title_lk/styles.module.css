@@ -1,0 +1,21 @@
+.title {
+    color: #161A26 !important;
+}
+
+.under_line {
+    padding-bottom: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.under_line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 30px;
+    background: rgba(255, 102, 100, 1);
+}

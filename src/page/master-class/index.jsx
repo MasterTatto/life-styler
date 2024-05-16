@@ -6,6 +6,7 @@ import img from '../../assetss/book.png'
 import Button from "../../common/button";
 import {NavLink} from "react-router-dom";
 import PaginationCustom from "../../components/pagination";
+import TitleLk from "../../common/title_lk";
 
 const data = [
     {
@@ -27,11 +28,9 @@ const data = [
 const MasterClass = () => {
     return (
         <div className={s.main}>
-            <div className={s.under_line}>
-                <Text type={'h48'} className={s.title}>
-                    Мастер-классы
-                </Text>
-            </div>
+            <TitleLk>
+                Мастер-классы
+            </TitleLk>
 
             <div className={s.content}>
                 {data?.map((el, i) => {

@@ -4,17 +4,16 @@ import img from '../../assetss/test.png'
 import Text from "../../common/text";
 import {useParams} from "react-router-dom";
 import classNames from "classnames";
+import TitleLk from "../../common/title_lk";
 
 const StandartItem = ({type}) => {
     const {id} = useParams()
 
     return (
         <div className={s.test}>
-            <div className={s.under_line}>
-                <Text type={'h48'} className={s.title}>
-                    Бизнес в сетевом маркетинге №{id}
-                </Text>
-            </div>
+            <TitleLk>
+                Бизнес в сетевом маркетинге №{id}
+            </TitleLk>
 
             <div className={s.content}>
                 {type === 1 ? <div className={classNames(s.img, type === 1 && s.iframe)}>

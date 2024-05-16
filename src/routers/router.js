@@ -7,6 +7,8 @@ import UnAuthContainer from "../components/unAuthContainer";
 import AuthComponent from "../components/authComponent";
 import CourseItem from "../page/courseItem";
 import StandartItem from "../page/standartItem";
+import FilmBookMusic from "../page/filmBookMusic";
+import MediaItem from "../page/mediaItem";
 
 
 const Router = () => {
@@ -24,6 +26,8 @@ const Router = () => {
                 <Route path={'course/:id'} element={<CourseItem/>}/>
                 <Route path={'master-class/:id'} element={<StandartItem type={1}/>}/>
                 <Route path={'master-class'} element={<MasterClass/>}/>
+                <Route path={'media'} element={<FilmBookMusic/>}/>
+                <Route path={'media/:type'} element={<MediaItem/>}/>
             </Route>
 
             <Route path={'*'} element={<Landing/>}/>
