@@ -6,13 +6,13 @@ import {useParams} from "react-router-dom";
 import classNames from "classnames";
 import TitleLk from "../../common/title_lk";
 
-const StandartItem = ({type}) => {
+const StandartItem = ({type, title}) => {
     const {id} = useParams()
 
     return (
         <div className={s.test}>
             <TitleLk>
-                Бизнес в сетевом маркетинге №{id}
+                {title} №{id}
             </TitleLk>
 
             <div className={s.content}>

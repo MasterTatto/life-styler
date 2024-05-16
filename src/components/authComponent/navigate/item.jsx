@@ -12,6 +12,10 @@ import {NavLink} from "react-router-dom";
 const ItemNavigate = ({title, icon, data, link}) => {
     const [open, setOpen] = React.useState(false);
 
+    const WrapperTop = ({children}) => {
+        return link ? <NavLink to={link}>{children}</NavLink> : <>{children}</>
+    }
+
     const handleClick = () => {
         setOpen(!open);
     };
@@ -34,17 +38,19 @@ const ItemNavigate = ({title, icon, data, link}) => {
             aria-labelledby="nested-list-subheader"
         >
 
-            <ListItemButton onClick={data && handleClick}>
-                <ListItemIcon>
-                    {icon}
-                    {/*<InboxIcon sx={{color: 'rgba(255, 102, 100, 1)'}}/>*/}
-                </ListItemIcon>
-                <p className={s.title}>{title}</p>
-                {data && <>
-                    {open ? <ExpandLess sx={{color: '#fff'}}/> : <ExpandMore sx={{color: '#fff'}}/>}
-                </>}
+            <WrapperTop>
+                <ListItemButton onClick={data && handleClick}>
+                    <ListItemIcon>
+                        {icon}
+                        {/*<InboxIcon sx={{color: 'rgba(255, 102, 100, 1)'}}/>*/}
+                    </ListItemIcon>
+                    <p className={s.title}>{title}</p>
+                    {data && <>
+                        {open ? <ExpandLess sx={{color: '#fff'}}/> : <ExpandMore sx={{color: '#fff'}}/>}
+                    </>}
 
-            </ListItemButton>
+                </ListItemButton>
+            </WrapperTop>
             {(data) && <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     {data?.map((el, i) => {

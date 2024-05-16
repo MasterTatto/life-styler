@@ -1,0 +1,72 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    padding: 20px 24px;
+
+}
+
+.title {
+    font-family: Manrope, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 43.71px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.description {
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.59px;
+    text-align: left;
+    color: rgba(119, 124, 139, 1);
+}
+
+.btn {
+    max-width: 160px;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.date {
+    font-family: Manrope, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: left;
+    color: rgba(51, 81, 211, 1);
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: Manrope, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: left;
+    color: rgba(22, 26, 38, 1);
+}

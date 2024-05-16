@@ -51,22 +51,22 @@ const navigate = [
             {title: 'Курсы', link: 'course'},
             {title: 'Мастер классы', link: 'master-class'},
             {title: 'Книги, фильмы, музыка', link: 'media'},
-            {title: 'Мотивация', link: '/lk'},
-            {title: 'Полезные статьи', link: '/lk'},
-            {title: 'Полезные программы', link: '/lk'},
+            {title: 'Мотивация', link: 'motivation'},
+            {title: 'Полезные статьи', link: 'article'},
+            {title: 'Полезные программы', link: 'service'},
         ]
     },
     {
-        title: 'Новости', link: '/lk', icon: <Icon5/>,
+        title: 'Новости', link: 'news', icon: <Icon5/>,
     },
     {
-        title: 'Контакты', link: '/lk', icon: <Icon6/>,
+        title: 'Контакты', link: 'contact', icon: <Icon6/>,
     },
     {
         title: 'Сообщения', link: '/lk', icon: <Icon7/>,
     },
     {
-        title: 'Отзывы', link: '/lk', icon: <Icon8/>,
+        title: 'Отзывы', link: 'review', icon: <Icon8/>,
     },
     // {
     //     title: 'Реклама', link: '/lk', icon: <Icon9/>,
