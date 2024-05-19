@@ -15,6 +15,9 @@ import Service from "../page/service";
 import News from "../page/news";
 import Contact from "../page/contact";
 import Review from "../page/review";
+import MyProfile from "../page/myProfile";
+import Sms from "../page/sms";
+import CurrentChat from "../page/curentSms";
 
 
 const Router = () => {
@@ -27,7 +30,7 @@ const Router = () => {
             }/>
 
             <Route path={'/lk'} element={<AuthComponent/>}>
-                <Route index element={<h1>content</h1>}/>
+                <Route index element={<MyProfile/>}/>
                 <Route path={'course'} element={<Course/>}/>
                 <Route path={'course/:id'} element={<CourseItem/>}/>
                 <Route path={'master-class/:id'} element={<StandartItem title={'Мастер классы'} type={1}/>}/>
@@ -43,6 +46,9 @@ const Router = () => {
                 <Route path={'service'} element={<Service/>}/>
                 <Route path={'contact'} element={<Contact/>}/>
                 <Route path={'review'} element={<Review/>}/>
+                <Route path={'chat'} element={<Sms/>}/>
+                <Route path={'chat/:id'} element={<CurrentChat/>}/>
+                <Route path={'*'} element={<MyProfile/>}/>
             </Route>
 
             <Route path={'*'} element={<Landing/>}/>

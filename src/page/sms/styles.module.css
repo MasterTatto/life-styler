@@ -1,0 +1,99 @@
+.content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.item {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    width: 100%;
+    height: 175px;
+    position: relative;
+    cursor: pointer;
+}
+
+.close_box {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.item_content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.item_content_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.item_content_left_bottom {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: -10px;
+}
+
+.item_content_top_left {
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.59px;
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 80%;
+    width: 100%;
+}
+
+.item_content_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item_content_bottom_left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.item_content_bottom_left_name {
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27.32px;
+    text-align: left;
+
+    color: rgba(119, 124, 139, 1);
+}
+
+.item_content_bottom_left_type {
+    color: rgba(255, 102, 100, 1);
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27.32px;
+    text-align: left;
+
+}
+
+.item_content_bottom_date {
+    font-family: Manrope, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.39px;
+    text-align: left;
+    color: rgba(51, 81, 211, 1);
+}

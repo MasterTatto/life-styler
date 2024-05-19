@@ -11,6 +11,7 @@ import Button from "../../common/button";
 import ButtonV2 from "../../common/buttonv2";
 import classNames from "classnames";
 import {NavLink} from "react-router-dom";
+import {toast} from "react-toastify";
 
 const contact = [
     {icon: <MailIcon/>, value: 'admin@lfstlr.com'},
@@ -18,6 +19,7 @@ const contact = [
     {icon: <TgIcon/>, value: 'lfstlr'},
 ]
 const Contact = () => {
+
     return (
         <div className={s.main}>
             <TitleLk>

@@ -63,7 +63,7 @@ const navigate = [
         title: 'Контакты', link: 'contact', icon: <Icon6/>,
     },
     {
-        title: 'Сообщения', link: '/lk', icon: <Icon7/>,
+        title: 'Сообщения', link: 'chat', icon: <Icon7/>,
     },
     {
         title: 'Отзывы', link: 'review', icon: <Icon8/>,
