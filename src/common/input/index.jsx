@@ -10,6 +10,7 @@ const Input = ({
                    value,
                    name,
                    placeholder,
+                   onKeyPress = () => {},
                    title
                }) => {
     return (
@@ -20,6 +21,7 @@ const Input = ({
                 helperText={helperText}
                 onBlur={onBlur} onChange={onChange}
                 value={value} name={name}
+                onKeyPress={onKeyPress}
                 InputLabelProps={{shrink: true}}
                 inputProps={{
                     style: {

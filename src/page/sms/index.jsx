@@ -16,13 +16,9 @@ const Sms = () => {
 
             <div className={s.content}>
                 {[1, 2, 3, 4].map((el, i) => {
-                    return <NavLink to={`/lk/chat/${i + 1}`}>
+                    return <NavLink to={`/lk/chat/${i + 1}`} >
                         <div key={i} className={s.item}>
-                            <div className={s.close_box}>
-                                <IconButton>
-                                    <CloseIcon sx={{color: 'rgba(255, 102, 100, 1)'}}/>
-                                </IconButton>
-                            </div>
+
                             <Avatar sx={{height: '100%', width: '200px', borderRadius: 0}}/>
 
                             <div className={s.item_content}>
@@ -54,6 +50,14 @@ const Sms = () => {
 
                                     <p className={s.item_content_bottom_date}> 12:31&nbsp;09.05.2022</p>
                                 </div>
+                            </div>
+                            <div className={s.close_box} onClick={(e) => {
+                                e.stopPropagation()
+                                e.preventDefault()
+                            }}>
+                                <IconButton>
+                                    <CloseIcon sx={{color: 'rgba(255, 102, 100, 1)'}}/>
+                                </IconButton>
                             </div>
                         </div>
                     </NavLink>
