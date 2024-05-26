@@ -18,6 +18,8 @@ import Review from "../page/review";
 import MyProfile from "../page/myProfile";
 import Sms from "../page/sms";
 import CurrentChat from "../page/curentSms";
+import MatrixStat from "../page/matrixStat";
+import Matrix from "../page/matrix";
 
 
 const Router = () => {
@@ -48,6 +50,14 @@ const Router = () => {
                 <Route path={'review'} element={<Review/>}/>
                 <Route path={'chat'} element={<Sms/>}/>
                 <Route path={'chat/:id'} element={<CurrentChat/>}/>
+                <Route path={'LifeStyler/stat'} element={<MatrixStat title={'Life Styler'}/>}/>
+                <Route path={'EliteMatrix/stat'} element={<MatrixStat title={'Life Elite'}/>}/>
+                <Route path={'SilverMatrix/stat'} element={<MatrixStat title={'Life Silver'}/>}/>
+                <Route path={'GoldMatrix/stat'} element={<MatrixStat title={'Life Gold'}/>}/>
+                <Route path={'LifeStyler/matrix'} element={<Matrix title={'Life Styler'}/>}/>
+                <Route path={'EliteMatrix/matrix'} element={<Matrix title={'Life Elite'}/>}/>
+                <Route path={'SilverMatrix/matrix'} element={<Matrix title={'Life Silver'}/>}/>
+                <Route path={'GoldMatrix/matrix'} element={<Matrix title={'Life Gold'}/>}/>
                 <Route path={'*'} element={<MyProfile/>}/>
             </Route>
 

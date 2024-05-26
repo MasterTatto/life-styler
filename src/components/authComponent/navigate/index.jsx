@@ -37,36 +37,67 @@ const navigate = [
     },
     {
         title: 'Партнерские программы', icon: <Icon2/>, data: [
-            {title: 'Life Styler', link: '/lk'},
-            {title: 'Life Elite', link: '/lk'},
-            {title: 'Life Silver', link: '/lk'},
-            {title: 'Life Gold', link: '/lk'},
+            {
+                title: 'Life Styler', data: [
+                    {title: 'Структура', link: '/lk/2'},
+                    {title: 'Матрицы', link: '/lk/LifeStyler/matrix'},
+                    {title: 'Маркетинг', link: '/lk/4'},
+                    {title: 'Статистика', link: '/lk/LifeStyler/stat'},
+                ]
+            },
+            {
+                title: 'Life Elite',
+                data: [
+                    {title: 'Структура', link: '/lk/5'},
+                    {title: 'Матрицы', link: '/lk/EliteMatrix/matrix'},
+                    {title: 'Маркетинг', link: '/lk/7'},
+                    {title: 'Статистика', link: '/lk/EliteMatrix/stat'},
+                ]
+            },
+            {
+                title: 'Life Silver',
+                data: [
+                    {title: 'Структура', link: '/lk/8'},
+                    {title: 'Матрицы', link: '/lk/SilverMatrix/matrix'},
+                    {title: 'Маркетинг', link: '/lk/10'},
+                    {title: 'Статистика', link: '/lk/SilverMatrix/stat'},
+                ]
+            },
+            {
+                title: 'Life Gold',
+                data: [
+                    {title: 'Структура', link: '/lk/11'},
+                    {title: 'Матрицы', link: '/lk/GoldMatrix/matrix'},
+                    {title: 'Маркетинг', link: '/lk/13'},
+                    {title: 'Статистика', link: '/lk/GoldMatrix/stat'},
+                ]
+            },
         ]
     },
     {
-        title: 'Управление финансами', link: '/lk', icon: <Icon3/>,
+        title: 'Управление финансами', link: '/lk/14', icon: <Icon3/>,
     },
     {
         title: 'Обучение', icon: <Icon4/>, data: [
-            {title: 'Курсы', link: 'course'},
-            {title: 'Мастер классы', link: 'master-class'},
-            {title: 'Книги, фильмы, музыка', link: 'media'},
-            {title: 'Мотивация', link: 'motivation'},
-            {title: 'Полезные статьи', link: 'article'},
-            {title: 'Полезные программы', link: 'service'},
+            {title: 'Курсы', link: '/lk/course'},
+            {title: 'Мастер классы', link: '/lk/master-class'},
+            {title: 'Книги, фильмы, музыка', link: '/lk/media'},
+            {title: 'Мотивация', link: '/lk/motivation'},
+            {title: 'Полезные статьи', link: '/lk/article'},
+            {title: 'Полезные программы', link: '/lk/service'},
         ]
     },
     {
-        title: 'Новости', link: 'news', icon: <Icon5/>,
+        title: 'Новости', link: '/lk/news', icon: <Icon5/>,
     },
     {
-        title: 'Контакты', link: 'contact', icon: <Icon6/>,
+        title: 'Контакты', link: '/lk/contact', icon: <Icon6/>,
     },
     {
-        title: 'Сообщения', link: 'chat', icon: <Icon7/>,
+        title: 'Сообщения', link: '/lk/chat', icon: <Icon7/>,
     },
     {
-        title: 'Отзывы', link: 'review', icon: <Icon8/>,
+        title: 'Отзывы', link: '/lk/review', icon: <Icon8/>,
     },
     // {
     //     title: 'Реклама', link: '/lk', icon: <Icon9/>,
@@ -79,10 +110,10 @@ const navigate = [
     // },
     {
         title: 'Настройки кабинета', icon: <Icon11/>, data: [
-            {title: 'Профиль', link: '/lk'},
-            {title: 'Пароль', link: '/lk'},
-            {title: 'Емейл', link: '/lk'},
-            {title: 'Лендинг', link: '/lk'},
+            {title: 'Профиль', link: '/lk/15'},
+            {title: 'Пароль', link: '/lk/16'},
+            {title: 'Емейл', link: '/lk/17'},
+            {title: 'Лендинг', link: '/lk/18'},
         ]
     },
 ]
