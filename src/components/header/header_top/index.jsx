@@ -9,6 +9,7 @@ import {ReactComponent as Icon5} from "../../../assetss/svg/header/chat.svg";
 import Auth from "../../auth";
 import {AuthContext} from "../../../App";
 import classNames from "classnames";
+import Registartion from "../../registration";
 
 const header_top = [
     {title: 'Youtube', icon: <Icon1/>},
@@ -19,11 +20,13 @@ const header_top = [
 ]
 const HeaderTop = () => {
     const [openModal, setOpenModal] = useState(false)
+    const [openModalReg, setOpenModalReg] = useState(false)
     const {isAuth, setIsAuth} = useContext(AuthContext)
 
     return (
         <div className={s.header_top}>
             {openModal && <Auth open={openModal} handleClose={() => setOpenModal(false)}/>}
+            {openModalReg && <Registartion open={openModalReg} handleClose={() => setOpenModalReg(false)}/>}
             <div className={s.header_top_left}>
                 {header_top?.map((el, i) => {
                     return <div
@@ -35,7 +38,9 @@ const HeaderTop = () => {
             </div>
 
             <div className={s.btns}>
-                <Button className={s.btn}>{isAuth ? 'Кабинет' : 'Регистрация'}</Button>
+                <Button className={s.btn} onClick={() => {
+                    setOpenModalReg(true)
+                }}>Регистрация</Button>
                 <Button variant={2} className={classNames(s.btn)} onClick={() => {
                     if (isAuth) {
                         setIsAuth('')

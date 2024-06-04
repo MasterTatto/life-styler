@@ -9,6 +9,7 @@ import Button from "../../common/button";
 import {useFormik} from "formik";
 import {toast} from "react-toastify";
 import {AuthContext} from "../../App";
+import CustomInput from "../input";
 
 const style = {
     position: 'absolute',
@@ -92,54 +93,18 @@ const Auth = ({open, handleClose}) => {
                             <Text type={'h32'} className={s.title}>Авторизация</Text>
                         </div>
                         <div className={s.inputs}>
-                            <TextField
-                                error={formik.touched.login && formik.errors.login}
-                                helperText={formik.touched.login && formik.errors.login}
-                                onBlur={formik.handleBlur} onChange={formik.handleChange}
-                                value={formik.values.login} name={'login'}
-                                InputLabelProps={{shrink: true}} sx={{
-                                border: 'none',
-                                outline: 'none',
+                            <CustomInput
+                                errorText={formik.touched.login && formik.errors.login}
+                                name={'login'} placeholder={'Логин'} handleBlur={formik.handleBlur}
+                                handleChange={formik.handleChange} value={formik.values.login}
+                            />
 
-
-                                '& .MuiFormHelperText-root': {
-                                    // color: '#f3afaf'
-                                },
-                                "& .MuiOutlinedInput-root": {
-                                    boxShadow: 'inset 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
-                                    background: '#f2f2f2',
-                                    borderRadius: '5px',
-                                    "& fieldset": {
-                                        border: "none",
-                                    },
-                                    "&.Mui-focused fieldset": {
-                                        border: "none",
-                                    },
-                                },
-                            }} fullWidth id="outlined-basic" placeholder="Логин" variant="outlined"/>
-                            <TextField
-                                error={formik.touched.password && formik.errors.password}
-                                helperText={formik.touched.password && formik.errors.password}
-                                onBlur={formik.handleBlur} onChange={formik.handleChange}
-                                value={formik.values.password} name={'password'} type={'password'}
-                                InputLabelProps={{shrink: true}} sx={{
-                                border: 'none',
-                                outline: 'none',
-                                '& .MuiFormHelperText-root': {
-                                    // color: '#f3afaf'
-                                },
-                                "& .MuiOutlinedInput-root": {
-                                    boxShadow: 'inset 0 4px 4px 0 rgba(0, 0, 0, 0.25)',
-                                    background: '#f2f2f2',
-                                    borderRadius: '5px',
-                                    "& fieldset": {
-                                        border: "none",
-                                    },
-                                    "&.Mui-focused fieldset": {
-                                        border: "none",
-                                    },
-                                },
-                            }} fullWidth id="outlined-basic" placeholder={'Пароль'} variant="outlined"/>
+                            <CustomInput
+                                errorText={formik.touched.password && formik.errors.password}
+                                name={'password'} type={'password'} placeholder={'Пароль'}
+                                handleBlur={formik.handleBlur}
+                                handleChange={formik.handleChange} value={formik.values.password}
+                            />
                         </div>
                     </div>
 

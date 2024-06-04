@@ -9,7 +9,6 @@ import useLocalStorage from "use-local-storage";
 import Router from "./routers/router";
 import {useNavigate, useLocation} from "react-router-dom";
 import classNames from "classnames";
-
 export const AuthContext = createContext(null)
 
 function App() {
