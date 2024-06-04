@@ -81,7 +81,8 @@ table {
 
 .svg-chart-container {
     width: 100% !important;
-    height: calc(100vh - 75px - 38px - 38px - 81px) !important;
+    /*height: calc(100vh - 75px - 38px - 38px - 81px) !important;*/
+    height: calc(100%) !important;
 }
 
 
